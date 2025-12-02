@@ -1,5 +1,4 @@
 import { useState } from "react";
-import {FILE_URL} from "../lib/envVariables";
 import { getTime } from "../lib/utils";
 const SentMessage = ({message}) => {
 
