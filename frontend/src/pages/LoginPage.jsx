@@ -16,6 +16,8 @@ const LoginPage = () => {
     const handleChange = (value) => (event) => {
         setValues({...values, [value]: event.target.value});
     };
+
+    console.log(import.meta.env.VITE_API_URL);
     const handleSubmit = async (event) => {
         event.preventDefault();
         const isLoginSuccess = await login(values.email, values.password);
