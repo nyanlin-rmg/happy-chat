@@ -49,7 +49,7 @@ const LoginPage = () => {
                         </div>
                         <div className="mt-3">
                             <input id="password" type="password" 
-                            name="password" required autocomplete="current-password"
+                            name="password" required autoComplete="current-password"
                             onChange={handleChange('password')}
                             value={values.password}
                             className="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6" />

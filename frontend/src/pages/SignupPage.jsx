@@ -16,8 +16,6 @@ const Signup = () => {
         confirmPassword: ''
     });
 
-    console.log(values);
-
     const handleChange = value => event => {
         setValues({...values, [value]: event.target.value});
     }
@@ -30,7 +28,6 @@ const Signup = () => {
         const resData = await signup(values);
 
         if (resData) {
-            console.log("Res Data in SignupPage: ", resData)
             navigate('/login');            
         }
     }

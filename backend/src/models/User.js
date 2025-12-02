@@ -34,7 +34,7 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.virtual('imageLink').get(function() {
-    return `http://localhost:8000/public/profilePic/${this.profilePic}`
+    return `${process.env.APP_URI}/public/profilePic/${this.profilePic}`
 })
 
 userSchema.virtual('password')

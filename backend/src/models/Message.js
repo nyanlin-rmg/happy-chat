@@ -27,7 +27,7 @@ const messageSchema = new mongoose.Schema({
 });
 
 messageSchema.virtual('imageLink').get(function () {
-    return "http://localhost:8000/public/image/" + this.image;
+    return `${process.env.APP_URI}/public/image/${this.image}`;
 })
 
 const Message = mongoose.model('Message', messageSchema);
