@@ -2,16 +2,16 @@
       "rewrites": [
         {
           "source": "/(.*)",
-          "destination": "backend/api/index.html"
+          "destination": "backend/src/api/index.html"
         },
         {
           "source": "/api/(.*)",
-          "destination": "/api"
+          "destination": "/backend/src/api"
         }
       ],
       "functions": {
         "api/**/*.js": {
-          "runtime": "nodejs22.x"
+          "runtime": "nodejs20.x"
         }
       }
     }
