@@ -1,12 +1,12 @@
 import e from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import authRoutes from "./routes/auth.route.js";
-import messageRoutes from "./routes/message.route.js";
-import { connectDB } from "./lib/db.js";
+import authRoutes from "../routes/auth.route.js";
+import messageRoutes from "../routes/message.route.js";
+import { connectDB } from "../lib/db.js";
 import cookieParser from "cookie-parser";
 import { rateLimit } from "express-rate-limit";
-import { app, httpServer } from "../src/lib/socket.js";
+import { app, httpServer } from "../lib/socket.js";
 import path from "path";
 
 dotenv.config();
