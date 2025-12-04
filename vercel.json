@@ -1,0 +1,17 @@
+{
+      "rewrites": [
+        {
+          "source": "/(.*)",
+          "destination": "backend/api/index.html"
+        },
+        {
+          "source": "/api/(.*)",
+          "destination": "/api"
+        }
+      ],
+      "functions": {
+        "api/**/*.js": {
+          "runtime": "nodejs22.x"
+        }
+      }
+    }
