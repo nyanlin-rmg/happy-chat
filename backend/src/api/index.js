@@ -27,7 +27,7 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(cookieParser());
 
-app.use('/public/profilePic', e.static('src/public/upload/profilePic'));
+app.use('/public/profilePic', e.static('./src/public/upload/profilePic'));
 app.use('/public/image', e.static('src/public/upload/image'));
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
@@ -36,7 +36,7 @@ if (process.env.NODE_ENV==="dev") {
     app.use(e.static(path.join(__dirname, "../frontend/dist")));
 
     app.get('/{*splat}', (req, res) => {
-        res.sendFile(path.join(__dirname, '../../frontend/dist', 'index.html'));
+        res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
     });
 }
 
