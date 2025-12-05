@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
     cors: {
-        origin: ["http://localhost:5173"],
+        origin: [process.env.CLIENT_URL],
         credentials: true
     }
 });
