@@ -3,6 +3,7 @@ import { catchError } from "../lib/catchErrors";
 import { axiosInstance } from "../lib/axios";
 import toast from "react-hot-toast";
 import { io } from "socket.io-client";
+import { APP_URL } from "../lib/env-variables";
 
 export const useAuthStore = create((set, get) => (
     {
@@ -96,7 +97,7 @@ export const useAuthStore = create((set, get) => (
             const authUser = get().authUser;
             if (!authUser) return;
 
-            const socket = io("http://localhost:8000", {
+            const socket = io(APP_URL, {
                 withCredentials: true
             });
 
