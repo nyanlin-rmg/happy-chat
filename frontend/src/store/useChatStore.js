@@ -108,6 +108,8 @@ export const useChatStore = create((set, get) => ({
             console.log("error in sendMessage function => useChatStore: ", error);
             toast.error(error.message);
             set({messages: messages});
+        } finally {
+            set({mockMessages: {_id: "Progress...", messages: []}});
         }
     },
 
